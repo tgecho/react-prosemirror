@@ -1,0 +1,41 @@
+{
+  "name": "react-prosemirror",
+  "version": "0.0.1",
+  "description": "A React component for ProseMirror",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-demos": "webpack-dev-server",
+    "build-demos": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tgecho/react-prosemirror.git"
+  },
+  "keywords": [
+    "react",
+    "prosemirror",
+    "wysiwyg"
+  ],
+  "author": "Erik Simmler <tgecho@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tgecho/react-prosemirror/issues"
+  },
+  "homepage": "https://github.com/tgecho/react-prosemirror#readme",
+  "peerDependencies": {
+    "react": "^0.13.3"
+  },
+  "dependencies": {
+    "prosemirror": "git@github.com:ProseMirror/prosemirror.git"
+  },
+  "devDependencies": {
+    "babel-core": "^5.8.25",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^5.3.2",
+    "eslint": "^1.5.0",
+    "eslint-plugin-react": "^3.4.2",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.11.0"
+  }
+}

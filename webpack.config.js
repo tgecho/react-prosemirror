@@ -1,0 +1,22 @@
+var path = require('path');
+
+module.exports = {
+    entry: {
+        demo: path.join(__dirname, 'demo/demo.jsx')
+    },
+    output: {
+        filename: '[name].build.js'
+    },
+    devtool: 'cheap-module-source-map',
+    module: {
+        loaders: [
+            {test: /\.jsx?$/, loader: 'babel'},
+        ]
+    },
+    resolve: {
+        extensions: ['', '.js', '.jsx'],
+        alias: {
+            'react-prosemirror': __dirname
+        }
+    },
+};

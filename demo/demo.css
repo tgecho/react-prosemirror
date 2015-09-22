@@ -1,0 +1,14 @@
+.demo {
+	border-collapse: collapse;
+}
+.demo th {
+	text-align: left;
+	border-right: 1px solid #999;
+}
+.demo th, .demo td {
+	padding: 1em;
+}
+
+.demo .options label {
+	margin-right: .5em;
+}
