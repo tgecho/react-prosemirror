@@ -30,7 +30,16 @@ Until published to NPM, you can clone this repo or run:
 npm install git+git@github.com:tgecho/react-prosemirror.git
 ```
 
-react-prosemirror is written in ES6, so you'll need some sort of transpiler such as [Babel](https://babeljs.io/). See this project's `webpack.config.js` for an example.
+react-prosemirror and ProseMirror are both written in ES6, so you'll need some sort of transpiler such as [Babel](https://babeljs.io/) (bug reports/pull requests for other transpilers are welcome!). In Webpack, it's typical to make Babel ignore `node_modules` to improve performance using a loader definition such as:
+
+```
+{test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel'},
+```
+
+To enable Babel for both libraries, you can add another loader like the following:
+```
+{test: /\.jsx?$/, include: /prosemirror/, loader: 'babel'},
+```
 
 ## Usage
 
