@@ -1,7 +1,7 @@
 # react-prosemirror
 A [React](https://facebook.github.io/react/) component for [ProseMirror](http://prosemirror.net/).
 
-- [Demo](http://tgecho.github.io/react-prosemirror)
+- [Demo](https://tgecho.github.io/react-prosemirror)
 - [Kudos](http://marijnhaverbeke.nl/)
 - [Author](http://un.deter.red)
 
