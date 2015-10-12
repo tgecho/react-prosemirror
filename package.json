@@ -27,7 +27,7 @@
     "react": "^0.13.3"
   },
   "dependencies": {
-    "prosemirror": "git@github.com:ProseMirror/prosemirror.git"
+    "prosemirror": "git+https://github.com/ProseMirror/prosemirror.git"
   },
   "devDependencies": {
     "babel-core": "^5.8.25",
