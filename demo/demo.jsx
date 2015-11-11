@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import ProseMirror from 'react-prosemirror'
 import 'prosemirror/src/inputrules/autoinput'
 import 'prosemirror/src/menu/inlinemenu'
@@ -99,4 +100,4 @@ const Demo = React.createClass({
 	},
 })
 
-React.render(<Demo />, document.getElementById('demo'))
+ReactDOM.render(<Demo />, document.getElementById('demo'))

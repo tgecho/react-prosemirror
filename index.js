@@ -33,7 +33,7 @@ export default React.createClass({
 		this.pm = new ProseMirror(Object.assign({doc: this._lastValue}, this.props.options))
 	},
 	componentDidMount() {
-		this.refs.pm.getDOMNode().appendChild(this.pm.wrapper)
+		this.refs.pm.appendChild(this.pm.wrapper)
 		this.pm.on('change', () => {
 			const callback = this.props.onChange ||
 				'valueLink' in this.props && this.props.valueLink.requestChange
