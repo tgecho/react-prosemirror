@@ -10,7 +10,8 @@ module.exports = {
     devtool: 'cheap-module-source-map',
     module: {
         loaders: [
-            {test: /\.jsx?$/, loader: 'babel'},
+            {test: /\.json?$/, loader: 'json'},
+            {test: /\.jsx?$/, loader: 'babel'}
         ]
     },
     resolve: {

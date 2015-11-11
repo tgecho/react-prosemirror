@@ -1,10 +1,11 @@
 import React from 'react'
 import ProseMirror from 'react-prosemirror'
-import 'prosemirror/src/convert/to_markdown'
 import 'prosemirror/src/inputrules/autoinput'
 import 'prosemirror/src/menu/inlinemenu'
 import 'prosemirror/src/menu/buttonmenu'
 import 'prosemirror/src/menu/menubar'
+import 'prosemirror/src/parse/markdown'
+import 'prosemirror/src/serialize/markdown'
 
 
 const Demo = React.createClass({
