@@ -63,7 +63,8 @@ Finally, instances have a `getContent` method which defaults to the selected `do
 react-prosemirror simply passes options into ProseMirror. It will not automatically load other modules. For example, if you wish to use the `menubar` option or `markdown` format, you'll need to import those modules in addition to adding the appropriate options.
 
 ```
-import 'prosemirror/src/convert/to_markdown'
+import 'prosemirror/src/parse/markdown'
+import 'prosemirror/src/serialize/markdown'
 import 'prosemirror/src/menu/menubar'
 ```
 
