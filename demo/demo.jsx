@@ -7,6 +7,7 @@ import 'prosemirror/src/menu/buttonmenu'
 import 'prosemirror/src/menu/menubar'
 import 'prosemirror/src/parse/markdown'
 import 'prosemirror/src/serialize/markdown'
+import 'babel-polyfill'
 
 
 const Demo = React.createClass({
