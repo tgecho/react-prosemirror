@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/tgecho/react-prosemirror#readme",
   "peerDependencies": {
-    "react": "^0.14.2",
-    "react-dom": "^0.14.2"
+    "react": "~0.14.0",
+    "react-dom": "~0.14.0"
   },
   "dependencies": {
     "prosemirror": "~0.1.1"
