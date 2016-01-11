@@ -1,24 +1,23 @@
+import 'babel-polyfill'
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import ProseMirror from 'react-prosemirror'
-import 'prosemirror/src/inputrules/autoinput'
-import 'prosemirror/src/menu/inlinemenu'
-import 'prosemirror/src/menu/buttonmenu'
-import 'prosemirror/src/menu/menubar'
-import 'prosemirror/src/parse/markdown'
-import 'prosemirror/src/serialize/markdown'
-import 'babel-polyfill'
+import 'prosemirror/dist/inputrules/autoinput'
+import 'prosemirror/dist/menu/menubar'
+import 'prosemirror/dist/menu/tooltipmenu'
+import 'prosemirror/dist/menu/menu'
+import 'prosemirror/dist/markdown'
 
 
 const Demo = React.createClass({
 	getInitialState() {
 		return {
 			options: {
-				docFormat: 'html',
-				autoInput: true,
 				menuBar: true,
-				inlineMenu: false,
-				buttonMenu: false,
+				tooltipMenu: true,
+				autoInput: true,
+				docFormat: 'html',
 			},
 			output: `<h2>Hello World!</h2><p>This is an editor.</p>`,
 		}
@@ -35,16 +34,12 @@ const Demo = React.createClass({
 							menuBar
 						</label>
 						<label>
+							<input type="checkbox" checkedLink={this.optionLink('tooltipMenus')} />
+							tooltipMenu
+						</label>
+						<label>
 							<input type="checkbox" checkedLink={this.optionLink('autoInput')} />
 							autoInput
-						</label>
-						<label>
-							<input type="checkbox" checkedLink={this.optionLink('inlineMenu')} />
-							inlineMenu
-						</label>
-						<label>
-							<input type="checkbox" checkedLink={this.optionLink('buttonMenu')} />
-							buttonMenu
 						</label>
 						<select valueLink={this.optionLink('docFormat')}>
 							{['html', 'text', 'markdown', 'json'].map(f =>

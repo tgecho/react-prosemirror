@@ -1,5 +1,5 @@
 import React from 'react'
-import {ProseMirror} from 'prosemirror/src/edit/main'
+import {ProseMirror} from 'prosemirror/dist/edit'
 
 export default React.createClass({
 	propTypes: {

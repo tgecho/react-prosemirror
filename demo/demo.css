@@ -1,9 +1,12 @@
 .demo {
 	border-collapse: collapse;
+	width: 800px;
+	max-width: 100%;
 }
 .demo th {
 	text-align: left;
 	border-right: 1px solid #999;
+	width: 4em;
 }
 .demo th, .demo td {
 	padding: 1em;

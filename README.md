@@ -71,19 +71,18 @@ Finally, instances have a `getContent` method which defaults to the selected `do
 react-prosemirror simply passes options into ProseMirror. It will not automatically load other modules. For example, if you wish to use the `menubar` option or `markdown` format, you'll need to import those modules in addition to adding the appropriate options.
 
 ```js
-import 'prosemirror/src/parse/markdown'
-import 'prosemirror/src/serialize/markdown'
-import 'prosemirror/src/menu/menubar'
+import 'prosemirror/dist/markdown'
+import 'prosemirror/dist/menu/menubar'
 ```
 
 ### Formats
 
 `options.docFormat` is used to determine the type of value returned to the `onChange` callback as well as what is expected to be in the `value` prop.
 
-react-prosemirror will attempt to control the component in the spirit of standard React form elements (see: [Why Controlled Components?](https://facebook.github.io/react/docs/forms.html#why-controlled-components)). To avoid thrashing ProseMirror, it will only call `setContent` when the new value is not strictly equal (`===`) to the last value pulled from ProseMirror. This should work for most cases, but be aware that if you're using a complex type such as `json`.
+react-prosemirror will attempt to control the component in the spirit of standard React form elements (see: [Why Controlled Components?](https://facebook.github.io/react/docs/forms.html#why-controlled-components)). To avoid thrashing ProseMirror, it will only call `setContent` when the new value is not strictly equal (`===`) to the last value pulled from ProseMirror. This should work for most cases, but be aware of that if you're using a complex type such as `json`.
 
 ## Project Status
 
 I would consider this library largely complete within its scope, though clearly not proven in a production setting. I'm open to refinements, especially around the interaction of `docFormat` and controlled values.
 
-I will track ProseMirror API changes as appropriate, including when they begin publishing to NPM.
+I intend to track ProseMirror API changes as appropriate, including when they begin publishing to NPM.
