@@ -15,7 +15,7 @@ const Hello = React.createClass({
     return {value: 'Hello World!'}
   },
   render() {
-    return <ProseMirror value={value} onChange={callback} />
+    return <ProseMirror value={this.state.value} onChange={this.onChange} />
   },
   onChange(value) {
     this.setState({value})
@@ -25,29 +25,12 @@ const Hello = React.createClass({
 
 ## Installation
 
-Until published to NPM, you can clone this repo or run:
+You can clone this repo or run:
 ```sh
-npm install git+git@github.com:tgecho/react-prosemirror.git
+npm install react-prosemirror
 ```
 
-react-prosemirror and ProseMirror are both written in ES6, so you'll need some sort of transpiler such as [Babel](https://babeljs.io/) (bug reports/pull requests for other transpilers are welcome!). In Webpack, it's typical to make Babel ignore `node_modules` to improve performance using a loader definition such as:
-
-```js
-{test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel'},
-```
-
-To enable Babel for both libraries, you can add another loader like the following:
-```js
-{test: /\.jsx?$/, include: /prosemirror/, loader: 'babel'},
-```
-
-If you're using Babel 6, you'll need at least the "es2015" preset.
-
-```json
-{"presets": ["es2015"]}
-```
-
-If your target environment doesn't natively support `Object.assign`, you may want to use some sort of polyfill such as [babel-polyfill](https://babeljs.io/docs/usage/polyfill/).
+If your target environment doesn't natively support `Object.assign`, you may need to use some sort of polyfill such as [babel-polyfill](https://babeljs.io/docs/usage/polyfill/).
 
 ## Usage
 
@@ -85,4 +68,4 @@ react-prosemirror will attempt to control the component in the spirit of standar
 
 I would consider this library largely complete within its scope, though clearly not proven in a production setting. I'm open to refinements, especially around the interaction of `docFormat` and controlled values.
 
-I intend to track ProseMirror API changes as appropriate, including when they begin publishing to NPM.
+I intend to track ProseMirror API changes as needed.

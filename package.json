@@ -1,12 +1,14 @@
 {
   "name": "react-prosemirror",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "A React component for ProseMirror",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-demos": "webpack-dev-server",
-    "build-demos": "webpack"
+    "demo": "webpack-dev-server",
+    "build-demo": "webpack",
+    "dist": "babel index.js -d dist",
+    "prepublish": "rm -rf dist/* && npm run dist"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,7 @@
     "prosemirror": "~0.1.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.4.0",
     "babel-core": "^6.1.4",
     "babel-eslint": "^4.1.5",
     "babel-loader": "^6.1.0",
