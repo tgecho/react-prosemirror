@@ -18,7 +18,8 @@ export default React.createClass({
 	componentWillUpdate(props) {
 		if ('value' in props || 'valueLink' in props) {
 			const value = props.value ||
-				('valueLink' in props && props.valueLink.value)
+				('valueLink' in props && props.valueLink.value) ||
+				''
 
 			if (value !== this._lastValue) {
 				this.pm.setContent(value, props.options.docFormat)
