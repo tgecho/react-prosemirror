@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "demo": "webpack-dev-server",
+    "demo": "webpack-dev-server --inline --host 0.0.0.0",
     "build-demo": "webpack",
     "dist": "babel index.js -d dist",
     "prepublish": "rm -rf dist/* && npm run dist"
