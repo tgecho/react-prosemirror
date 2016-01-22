@@ -1,6 +1,6 @@
 {
   "name": "react-prosemirror",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A React component for ProseMirror",
   "main": "dist/index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/tgecho/react-prosemirror/issues"
   },
-  "homepage": "https://github.com/tgecho/react-prosemirror#readme",
+  "homepage": "https://github.com/tgecho/react-prosemirror",
   "peerDependencies": {
     "react": "~0.14.0",
     "react-dom": "~0.14.0"
