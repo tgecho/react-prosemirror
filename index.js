@@ -31,7 +31,15 @@ export default React.createClass({
 			('valueLink' in this.props && this.props.valueLink.value) ||
 			this.props.defaultValue
 
-		this.pm = new ProseMirror(Object.assign({doc: this._lastValue}, this.props.options))
+		const options = Object.assign({doc: this._lastValue}, this.props.options)
+		if (!this._lastValue) {
+			// We could fall back to an empty string, but that wouldn't work for the json
+			// docFormat. Setting docFormat to null allows ProseMirror to use its own
+			// default empty document.
+			options.docFormat = null
+		}
+
+		this.pm = new ProseMirror(options)
 	},
 	componentDidMount() {
 		this.refs.pm.appendChild(this.pm.wrapper)
