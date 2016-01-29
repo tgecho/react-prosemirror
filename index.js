@@ -2,6 +2,7 @@ import React from 'react'
 import {ProseMirror} from 'prosemirror/dist/edit'
 
 export default React.createClass({
+	displayName: 'ProseMirror',
 	propTypes: {
 		options: React.PropTypes.object,
 		defaultValue: React.PropTypes.any,
