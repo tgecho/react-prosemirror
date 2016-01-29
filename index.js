@@ -27,18 +27,22 @@ export default React.createClass({
 		}
 	},
 	componentWillMount() {
-		this._lastValue = this.props.value ||
-			('valueLink' in this.props && this.props.valueLink.value) ||
-			this.props.defaultValue
+		this._lastValue = this.props.value
+		if (this._lastValue === undefined && 'valueLink' in this.props) {
+			this._lastValue = this.props.valueLink.value
+		}
+		if (this._lastValue === undefined) {
+			this._lastValue = this.props.defaultValue
+		}
 
 		const options = Object.assign({doc: this._lastValue}, this.props.options)
-		if (!this._lastValue) {
+		if (options.doc === undefined) {
 			// We could fall back to an empty string, but that wouldn't work for the json
 			// docFormat. Setting docFormat to null allows ProseMirror to use its own
 			// default empty document.
+			options.doc = null
 			options.docFormat = null
 		}
-
 		this.pm = new ProseMirror(options)
 	},
 	componentDidMount() {
