@@ -9,8 +9,8 @@ export default React.createClass({
 		value: React.PropTypes.any,
 		onChange: React.PropTypes.func,
 		valueLink: React.PropTypes.shape({
-			value: React.PropTypes.any.isRequired,
-			requestChange: React.PropTypes.func.isRequired,
+			value: React.PropTypes.any,
+			requestChange: React.PropTypes.func,
 		}),
 	},
 	render() {
@@ -37,7 +37,7 @@ export default React.createClass({
 		}
 
 		const options = Object.assign({doc: this._lastValue}, this.props.options)
-		if (options.doc === undefined) {
+		if (options.doc === undefined || options.doc === null) {
 			// We could fall back to an empty string, but that wouldn't work for the json
 			// docFormat. Setting docFormat to null allows ProseMirror to use its own
 			// default empty document.
