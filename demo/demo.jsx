@@ -88,6 +88,7 @@ const Demo = React.createClass({
 	},
 	componentDidMount() {
 		this.updateOutput(this.refs.pm.getContent())
+		this.pm = this.refs.pm.pm
 	},
 	componentDidUpdate(_, prevState) {
 		if (prevState.options.docFormat !== this.state.options.docFormat) {
@@ -96,4 +97,4 @@ const Demo = React.createClass({
 	},
 })
 
-ReactDOM.render(<Demo />, document.getElementById('demo'))
+window.pm = ReactDOM.render(<Demo />, document.getElementById('demo')).pm
