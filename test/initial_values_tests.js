@@ -114,3 +114,27 @@ Invalid values will be passed into ProseMirror and may result in an error.
 		})
 	})
 })
+
+/*
+It just so happens that the html format coerces to a string, so things like
+numbers will work.
+*/
+;[0, 1].forEach(value => {
+	valueProps(value).forEach(valueProps => {
+
+		const pmProps = {
+			...valueProps,
+			options: {docFormat: 'html'},
+		}
+
+		it(`Invalid value: ${JSON.stringify(pmProps)}`, () => {
+			const pm = pmForProps(pmProps)
+			testValues(pm, {
+				'text': `${value}`,
+				'markdown': `${value}`,
+				'html': `<p>${value}</p>`,
+				'json': {type: 'doc', content:[{type: 'paragraph', content: [{type: 'text', text: value.toString()}]}]},
+			})
+		})
+	})
+})
