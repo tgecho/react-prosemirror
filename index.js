@@ -1,5 +1,6 @@
 import React from 'react'
 import {ProseMirror} from 'prosemirror/dist/edit'
+import {AssertionError} from 'prosemirror/dist/util/error'
 
 export default React.createClass({
 	displayName: 'ProseMirror',
@@ -62,7 +63,12 @@ export default React.createClass({
 		const current = this.props.options
 		Object.keys(current).forEach(k => {
 			if (current[k] !== previous[k]) {
-				this.pm.setOption(k, current[k])
+				try {
+					this.pm.setOption(k, current[k])
+				} catch(e) {
+					console.error(e)
+					console.warn(`Are you creating "${k}" in your render function? If so it will fail the strict equality check.`)
+				}
 			}
 		})
 	},
