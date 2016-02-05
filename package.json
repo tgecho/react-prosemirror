@@ -31,7 +31,7 @@
     "react-dom": "~0.14.0"
   },
   "dependencies": {
-    "prosemirror": ">=0.1.1"
+    "prosemirror": ">=0.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.4.0",

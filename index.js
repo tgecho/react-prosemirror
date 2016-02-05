@@ -1,6 +1,5 @@
 import React from 'react'
-import {ProseMirror} from 'prosemirror/dist/edit'
-import {AssertionError} from 'prosemirror/dist/util/error'
+import {ProseMirror} from 'prosemirror'
 
 export default React.createClass({
 	displayName: 'ProseMirror',
