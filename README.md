@@ -1,5 +1,5 @@
 # react-prosemirror
-An unofficial [React](https://facebook.github.io/react/) component for [ProseMirror](http://prosemirror.net/).
+An unofficial [React](https://facebook.github.io/react/) component for [ProseMirror](http://prosemirror.net/). [![Build Status](https://travis-ci.org/tgecho/react-prosemirror.svg?branch=master)](https://travis-ci.org/tgecho/react-prosemirror)
 
 - [Demo](https://tgecho.github.io/react-prosemirror)
 - [Kudos](http://marijnhaverbeke.nl/)
