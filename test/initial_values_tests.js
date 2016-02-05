@@ -1,3 +1,5 @@
+import 'babel-polyfill'
+
 import React from 'react'
 import RTest from 'react-addons-test-utils'
 
