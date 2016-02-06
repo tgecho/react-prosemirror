@@ -6,7 +6,7 @@
   "scripts": {
     "test": "karma start --single-run --browsers PhantomJS",
     "watch-test": "karma start",
-    "demo": "webpack-dev-server --inline --host 0.0.0.0",
+    "start": "webpack-dev-server --inline --host 0.0.0.0",
     "build-demo": "webpack",
     "dist": "babel index.js -d dist",
     "prepublish": "rm -rf dist/* && npm run dist"

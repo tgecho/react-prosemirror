@@ -15,7 +15,7 @@ const Hello = React.createClass({
     return {value: 'Hello World!'}
   },
   render() {
-    return <ProseMirror value={this.state.value} onChange={this.onChange} />
+    return <ProseMirror value={this.state.value} onChange={this.onChange} options={{docFormat: 'html'}} />
   },
   onChange(value) {
     this.setState({value})
