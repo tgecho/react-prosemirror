@@ -34,7 +34,7 @@ const Demo = React.createClass({
 							menuBar
 						</label>
 						<label>
-							<input type="checkbox" checkedLink={this.optionLink('tooltipMenus')} />
+							<input type="checkbox" checkedLink={this.optionLink('tooltipMenu')} />
 							tooltipMenu
 						</label>
 						<label>
