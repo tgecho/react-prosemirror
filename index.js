@@ -24,6 +24,7 @@ export default React.createClass({
 
 			if (value !== this._lastValue) {
 				this.pm.setContent(value, props.options.docFormat)
+				this._lastValue = value
 			}
 		}
 	},

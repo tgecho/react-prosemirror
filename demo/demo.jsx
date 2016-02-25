@@ -97,4 +97,5 @@ const Demo = React.createClass({
 	},
 })
 
-window.pm = ReactDOM.render(<Demo />, document.getElementById('demo')).pm
+window.component = ReactDOM.render(<Demo />, document.getElementById('demo'))
+window.pm = window.component.pm
