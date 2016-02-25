@@ -27,12 +27,11 @@
   },
   "homepage": "https://github.com/tgecho/react-prosemirror",
   "peerDependencies": {
-    "react": "~0.14.0",
-    "react-dom": "~0.14.0"
+    "prosemirror": ">=0.2.0",
+    "react": ">=0.14.0",
+    "react-dom": ">=0.14.0"
   },
-  "dependencies": {
-    "prosemirror": ">=0.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.4.0",
     "babel-core": "^6.1.4",

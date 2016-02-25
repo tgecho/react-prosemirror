@@ -25,9 +25,9 @@ const Hello = React.createClass({
 
 ## Installation
 
-You can clone this repo or run:
+Via NPM (note that you need to install ProseMirror yourself)
 ```sh
-npm install react-prosemirror
+npm install --save react-prosemirror prosemirror
 ```
 
 If your target environment doesn't natively support `Object.assign`, you may need to use some sort of polyfill such as [babel-polyfill](https://babeljs.io/docs/usage/polyfill/).
