@@ -1,6 +1,6 @@
 {
   "name": "react-prosemirror",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A React component for ProseMirror",
   "main": "dist/index.js",
   "scripts": {
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/tgecho/react-prosemirror",
   "peerDependencies": {
-    "prosemirror": ">=0.2.0",
+    "prosemirror": ">=0.2.0 <0.8.0",
     "react": ">=0.14.0",
     "react-dom": ">=0.14.0"
   },
